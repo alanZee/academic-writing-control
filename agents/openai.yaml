@@ -1,4 +1,4 @@
 interface:
   display_name: "学术写作-小论文-控制任务"
-  short_description: "围绕控制科学问题与核心主张组织证据，借鉴样本的论证与学术英语"
-  default_prompt: "使用 $academic-writing-control，围绕我的科学问题和研究目标自顶向下安排论证，根据已有证据自底向上形成主张并撰写或润色控制论文；借鉴样本风格，按研究贡献适配结构。"
+  short_description: "明确控制论文应写成什么样及怎样写，以同一成稿标准支持规划、撰写与修改"
+  default_prompt: "使用 $academic-writing-control，根据我的科学问题、证据和本次请求，明确手稿应写成什么样及怎样写，完成相应的规划、撰写、审查或修改。"
