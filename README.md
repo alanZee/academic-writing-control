@@ -1,5 +1,7 @@
 # 学术写作-小论文-控制任务
 
+**Skill 许可证：[MIT](LICENSE)**
+
 面向流动控制及其他动力系统控制论文的用户级 Codex skill，主要辅助手稿规划与撰写，也支持审查、优化和重构。核心是让 agent 明确**这篇论文应写成什么样，以及怎样写出来**：从核心主张到篇章、段落、句序和图文证据，建立可执行的成稿标准与写作方法。
 
 以 Li 与 Zhang 的圆柱尾流论文为主要风格样本，并结合 Wang 等的基于模型的强化学习论文，解释编排如何服务科学问题和核心主张。规划、撰写与修改共享这些标准，按当前材料和用户请求选择动作。
@@ -31,7 +33,7 @@ git clone https://github.com/alanZee/academic-writing-control.git ~/.codex/skill
 
 ## 许可
 
-本项目原创的 skill 指令、分析说明及配置采用 [MIT License](LICENSE)，版权署名为 `Copyright (c) 2026 alanZee`。
+本 skill 的原创内容统一采用 [MIT License](LICENSE)，包括 `SKILL.md`、`agents/` 配置、`references/` 中的原创分析以及本 README。入口元数据使用 `license: MIT`，根目录 `LICENSE` 提供完整条款，版权署名为 `Copyright (c) 2026 alanZee`。
 
 第三方论文 PDF、原文摘录及其他明确归属于第三方的材料不在 MIT 授权范围内，保留各自原有许可；对第三方材料所作的改编仍须遵守其适用许可。MIT 不改变下列两篇文献的非商业等使用条件。
 
