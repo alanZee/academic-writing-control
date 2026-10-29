@@ -20,7 +20,7 @@ git clone https://github.com/alanZee/academic-writing-control.git ~/.codex/skill
 
 > 使用 $academic-writing-control，根据我的科学问题、已有结果和图表，规划论文的论证主线与章节安排，并撰写指定章节，说明各部分如何支撑核心主张。
 
-无需安装 ARS 或 Nature 系列 skill。仅审查、局部润色和全文重构按任务范围分别处理。
+无需安装 ARS 或 Nature 系列 skill。ARS风格软校准与去模板腔均采用本地提炼与适配；写稿和修改交付前默认进行相关语言质量复核，保留专业术语和科学含义。仅审查、局部润色和全文重构按任务范围分别处理。
 
 ## 内容导航
 
@@ -30,6 +30,12 @@ git clone https://github.com/alanZee/academic-writing-control.git ~/.codex/skill
 - [篇章逻辑](references/argument-architecture.md)、[逐段地图](references/paragraph-map.md)、[句子与衔接](references/sentence-and-transition-analysis.md)：样本如何编排，以及为何这样编排。
 - [章节写法](references/section-playbook.md)、[段落与语言](references/paragraph-and-language.md)、[主张检查](references/control-claim-checks.md)：写作和审查时的具体决策。
 - [样本画像](references/source-profile.md)：来源、分析口径和使用边界。
+- [对标诊断与润色](references/benchmark-revision-workbench.md)：按需使用的原文做法—迁移方法—常见不足—调整方向对照、分层判断及原创改写示例。
+- [案例复盘](references/benchmark-review-casebook.md)：九类具体问题的根因、迁移条件与反例，六组会话原始示范，以及完整答复的覆盖索引。
+
+- [完整起草示例](references/drafting-examples.md)：从明确的教学输入，经组织决策形成连续方法段和结果段，并核对事实与主张边界。
+- [ARS写作质量复核](references/ars-writing-quality.md)：与风格软校准一致的本地接入方式、默认复核时机、条件性检查及保留反例。
+- [行为试用](references/behavioral-checks.md)：维护时按需复用的四类输入、判据及有限试用记录；不是日常写作必读项。
 
 ## 许可
 
