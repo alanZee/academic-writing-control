@@ -13,7 +13,7 @@
 | T3 非RL连续起草 | 两段有分工且衔接；保留两时段、六个指标值、共同条件和单条记录；不增RL、图号、功率、机制或稳定性结论 |
 | T4 机制假说润色 | 保留可能解释、竞争解释、现有测量不能判别及单一激励频率范围；不要求先补实验才能润色 |
 
-按含义与任务完成情况判断，不能只匹配句式或关键词。每项区分通过、存在具体问题、无法判断；失败时记下原输出和问题，修正后只重跑受影响任务。不把四项任务变成所有未来请求的硬性验收表。
+按含义与任务完成情况判断，不能只匹配句式或关键词。每项区分通过、存在具体问题、无法判断；失败时记下原输出和问题，修正后只重跑受影响任务。不把这些试用变成所有未来请求的硬性验收表。
 
 ## 固定输入
 
@@ -79,3 +79,96 @@ Over 10–20 s, controller B instead yielded the lower displacement RMS: 0.20 mm
 #### T4
 
 The reduction in oscillation may be associated with a change in the phase relation between the applied force and the measured velocity. However, the available measurements cannot distinguish this explanation from the proposed redistribution of the response between modes. The observed attenuation is limited to the forcing frequency examined here.
+
+## 1.7.0 ARS＋Humanizer联合复核试用
+
+执行日期：2026-10-29。三个执行者各自从无会话历史的上下文开始，读取同一1.7.0候选skill；只提供任务、输入和必要资源范围，不提供下列判据或其他执行者输出。模型沿用主会话配置，复核者为主代理。以下输入均为虚构教学材料。
+
+### 判据与实际结果
+
+| 任务 | 预设判据 | 代理复核结果 |
+|---|---|---|
+| H1 清理结构残留 | 删除无信息开头、拔高收尾和聊天包装；保留所有数值、比较条件及单条轨迹范围；只输出最终正文 | 通过：保留Re=80、1.40/1.28、100–150、相同窗口、每例一条轨迹及两例0.05；未增加机制或统计显著性 |
+| H2 保留有效表达 | 不机械改写robust control、真实rather than对比、时间范围和机制限定；允许无需修改 | 通过：明确建议保留，说明技术词、计量区别和不可判别性各自的作用 |
+| H3 LaTeX只审查 | 不修改文件；不建议删除数学粗体、公式、引用键、回指和链接目标；遇到歧义不补造科学身份 | 通过：只给建议，保留技术内容；识别跨轨迹比较与时间变化的歧义，未补造轨迹身份。原文件前后SHA256一致 |
+
+H3给出的“redistribution of energy”以确认指代为条件，不是直接替作者确定机制；该建议仍需作者按实际含义选择。三个任务均未核验实验、外部引用或编译PDF。每类只执行一次，不能推为整稿效果、多人读者体验或普遍可靠性证明。只读资源范围由试用提示明确限制，因此不能单凭本轮结果证明所有自由工具使用场景的范围控制。
+
+### 任务输入
+
+#### H1 输入
+
+请用该skill润色以下英文结果段，只交付最终正文：
+Certainly! It is important to note that, at Re = 80, feedback decreases the mean drag coefficient from 1.40 in the uncontrolled case to 1.28 over t = 100–150. Both cases are evaluated over the same interval using one trajectory per case. The standard deviation of the lift coefficient remains 0.05 in both cases. This is the real breakthrough. I hope this helps!
+
+#### H2 输入
+
+仅审查以下文字是否需要语言修改，给出简短判断与必要理由。robust control为本稿已定义的方法类别，相关量也已定义。
+We use robust control for the prescribed interval of stiffness uncertainty. We compare interaction budgets rather than wall-clock training times. Over t = 100–150, the observed attenuation may reflect a change in the phase relation, although the measurements do not distinguish this explanation from the proposed redistribution between modes.
+
+#### H3 输入
+
+请仅审查 `latex-review.tex` 的表达是否有需要优化的地方，给出具体建议，不修改文件。它是自足的教学片段；图号、引用键、公式和外链均作为作者提供的文本内容，不需要核验外部来源。
+
+```latex
+\subsection{Controlled response}
+\label{sec:controlled}
+The perturbation velocity is denoted by $\mathbf{u}'$. Its energy is defined as
+\begin{equation}
+E(t)=\frac{1}{2}\int_{\Omega}\mathbf{u}'\cdot\mathbf{u}'\,\mathrm{d}\Omega.
+\label{eq:energy}
+\end{equation}
+It is important to note that the mean of $E(t)$ in \eqref{eq:energy} decreases from 0.30 to 0.20 over $t=100$--$150$ in the two trajectories compared in figure~\ref{fig:energy}. The definition follows \citet{demo2024}; the processed values are available in the \href{https://example.org/data}{data table}. The change may reflect a redistribution between modes.
+```
+
+### 当次实际输出
+
+以下保存最终回答；为使记录可迁移，仅将H3回答中的临时文件链接改为片段行号，并规范Markdown换行。内容判断及示例不作事后润色。未来执行者不要预读。
+
+#### H1 输出
+
+At Re = 80, feedback reduces the mean drag coefficient from 1.40 in the uncontrolled case to 1.28 over t = 100–150. Both cases are evaluated over the same interval using one trajectory per case. The standard deviation of the lift coefficient remains 0.05 in both cases.
+
+#### H2 输出
+
+**无需语言修改，建议保留原文。**
+
+- **robust control** 是已定义的方法类别，用词准确，不属于空泛修饰。
+- **rather than** 明确区分交互预算与实际训练耗时，具有实质辨别作用。
+- 第三句结构清楚；**may reflect** 与后半句分别表达可能解释和测量的不可判别性，并非重复限定。时间窗 **t = 100–150** 也应保留。
+
+#### H3 输出
+
+**有几处值得优化，主要集中在第 8 行；定义和公式无需因语言风格而改动。** 最需要处理的是比较关系的歧义，其次是冗余开场和句序。
+
+1. **明确“两个轨迹的均值比较”与“随时间下降”的区别。**
+
+   位置：第 8 行，`decreases from 0.30 to 0.20 over ... in the two trajectories`。
+
+   目前容易被读成：某条轨迹在 \(t=100\)–\(150\) 内从 0.30 下降到 0.20；也可能是两条轨迹在同一时间窗内的均值分别为这两个数。这会影响读者对结果的理解。
+
+   若原意是后者，建议采用：
+   > The mean values of \(E(t)\) over \(t=100\)–\(150\) are 0.30 and 0.20 for …, respectively.
+
+   省略处应使用作者已有的两个轨迹名称，并明确对应顺序；不能自行补成“无控制”和“受控”。若原意确为时间变化，则应明确均值的计算方式与变化对象。
+
+2. **删除无实质信息的强调开场。**
+
+   同行的 `It is important to note that` 没有增加条件或解释，可直接删除，让 `The mean ...` 成为句子开头。数值本身足以呈现差异，不必再补 `remarkably` 或 `significantly`。
+
+3. **将定义来源放回定义附近。**
+
+   `The definition follows \citet{demo2024}` 插在结果与解释之间，会让读者从结果退回定义。建议移至第 3 行，例如将第二句写成：
+   ```latex
+   Following \citet{demo2024}, its energy is defined as
+   ```
+   保留后续公式。数据表链接仍可紧接数值结果，保持“定义及来源 → 比较结果及数据入口 → 解释”的顺序。引用键和链接目标均无需更改。
+
+4. **保留解释的不确定性，可小幅改善指代。**
+
+   `The change may reflect a redistribution between modes.` 中的 `may reflect` 有实际作用，不属于需要删除的保守措辞，也不宜改为 `demonstrates` 或 `is caused by`。若确指前述能量均值降低，可考虑：
+   > This reduction may reflect a redistribution of energy between modes.
+
+   这只是明确 `change` 和 `redistribution` 的对象，仍保留原来的推测等级。
+
+第 3 行的符号引入清楚，`figure~\ref{fig:energy}`、`\eqref{eq:energy}` 等回指也有明确用途，无需为精简而机械删除。本次仅审查表达，未修改文件，未核验外部来源或编译。

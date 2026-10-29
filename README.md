@@ -20,7 +20,7 @@ git clone https://github.com/alanZee/academic-writing-control.git ~/.codex/skill
 
 > 使用 $academic-writing-control，根据我的科学问题、已有结果和图表，规划论文的论证主线与章节安排，并撰写指定章节，说明各部分如何支撑核心主张。
 
-无需安装 ARS 或 Nature 系列 skill。ARS风格软校准与去模板腔均采用本地提炼与适配；写稿和修改交付前默认进行相关语言质量复核，保留专业术语和科学含义。仅审查、局部润色和全文重构按任务范围分别处理。
+无需安装 ARS、Humanizer 或 Nature 系列 skill。ARS风格软校准、Writing Quality Check与Humanizer复核均采用本地提炼与适配；写稿和修改交付前默认执行ARS＋Humanizer联合复核，保留专业术语和科学含义。仅审查、局部润色和全文重构按任务范围分别处理。
 
 ## 内容导航
 
@@ -34,8 +34,8 @@ git clone https://github.com/alanZee/academic-writing-control.git ~/.codex/skill
 - [案例复盘](references/benchmark-review-casebook.md)：九类具体问题的根因、迁移条件与反例，六组会话原始示范，以及完整答复的覆盖索引。
 
 - [完整起草示例](references/drafting-examples.md)：从明确的教学输入，经组织决策形成连续方法段和结果段，并核对事实与主张边界。
-- [ARS写作质量复核](references/ars-writing-quality.md)：与风格软校准一致的本地接入方式、默认复核时机、条件性检查及保留反例。
-- [行为试用](references/behavioral-checks.md)：维护时按需复用的四类输入、判据及有限试用记录；不是日常写作必读项。
+- [ARS＋Humanizer联合复核](references/ars-writing-quality.md)：与风格软校准一致的本地接入方式、两套方法的分工、学术适配边界及保留反例。
+- [行为试用](references/behavioral-checks.md)：维护时按需复用的基础写作与联合复核输入、判据及有限试用记录；不是日常写作必读项。
 
 ## 许可
 
