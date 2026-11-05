@@ -1,6 +1,6 @@
 # 从材料到连续段落：完整起草示例
 
-用于已有事实但尚未成段的起草任务，配合[章节写法](section-playbook.md)；只需句法改写时用[段落与语言](paragraph-and-language.md)。两组均为**原创、虚构教学输入**，数字、实验和结果不属于任何源论文或用户项目。只迁移组织决策，不迁移事实；不需要为新稿补做示例中的实验。
+用于已有事实但尚未成段的起草任务，配合[章节写法](section-playbook.md)；只需句法改写时用[段落与语言](paragraph-and-language.md)。各组均为**原创、虚构教学输入**，数字、实验和结果不属于任何源论文或用户项目。只迁移组织决策，不迁移事实；不需要为新稿补做示例中的实验。
 
 每组展示输入边界、组织决策、成稿和核对。两段、三段是本练习的选择，不是写作配额；不要求日常交付附带这些分析表。主张边界以[主张检查](control-claim-checks.md)为准。
 
@@ -97,3 +97,19 @@ The constant input therefore does not maintain the low fluctuation level achieve
 ## 3. 迁移到其他起草任务
 
 按当前任务辨认已有事实、作者解释和缺失信息，再决定哪些条件读者必须先知道。选择能让比较回答问题的段落职责，写出连续正文后核对事实与强度。必要的结构调整可改变句序、段数和图的引用次序；不能改变结果、比较方向或解释等级。材料仅支持局部正文时交付该部分，把重要缺项留在简短说明中，不把练习框架当作新增实验或写满整节的要求。
+
+## 4. 引言局部：替代模型与策略各做什么
+
+原创、假设性教学输入，用于方法定位片段，不代表当前稿件或样本文献已经获得这些结果。对应[引言规则](section-playbook.md#引言中的问题对象与设计)，不要求所有控制论文都含替代模型。
+
+**给定材料：**目标是学习减阻反馈策略；作者希望减少策略训练中的CFD调用。策略从当前压力观测生成射流流量指令。替代模型以当前压力观测和流量指令为输入，预测下一次压力观测及阻力估计，用于策略训练中的转移与奖励评价；不预测完整流场。策略在该模型中训练，训练后的策略在原CFD环境评估。该协议已采用，但尚未提供控制或总成本结果；没有证明压力观测充分、模型闭环可信或稳定。
+
+**可能的不足：**“代理网络直接控制流场并显著加快训练”混淆了模型与策略，且提前报告未提供的效果。
+
+**建议正文，仅当材料身份如上：**
+
+To reduce CFD calls during policy training, we use a surrogate model to generate transitions and drag estimates for reward evaluation. The model takes the current pressure observations and commanded jet flow rate as inputs and predicts the next pressure observations and drag. The policy maps the current pressure observations to the jet flow-rate command and is trained through interactions with this model. The trained policy is evaluated in the original CFD environment.
+
+**核对与可变编排：**成本是设计目的，不是已测加速；模型预测与策略动作分别命名，未增加完整流场、可微求解器或稳定性保证。可以先介绍策略接口再交代训练环境；引言只保留区分职责的必要信息，网络层数和协议细节留Methods。若原稿已有相应效果主张，删去它需按[主张检查](control-claim-checks.md)的作者授权边界处理，本示例不是静默降调许可。
+
+**需要补训练动机时：**只有作者材料已表明策略交互产生的观测与训练数据不同，才将其写成已观察问题；若只是可能风险，应保持风险身份。Um提供的是“解释后续输入如何产生”的写法，不证明本例替代模型存在该问题，也不要求改成solver-in-the-loop。综述可解释流体控制背景或知识入口，不能代替模型准确性、闭环效果和总成本证据。

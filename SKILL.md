@@ -9,7 +9,7 @@ description: >-
   不因普通控制代码、实验运行或非控制领域写作请求自动启用。
 license: MIT
 metadata:
-  version: "1.7.0"
+  version: "1.8.0"
 ---
 
 # 学术写作-小论文-控制任务

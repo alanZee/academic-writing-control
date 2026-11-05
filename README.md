@@ -29,11 +29,11 @@ git clone https://github.com/alanZee/academic-writing-control.git ~/.codex/skill
 - [研究逻辑](references/research-logic.md)：科学问题、知识目标、证据设计与不同控制研究的适配。
 - [篇章逻辑](references/argument-architecture.md)、[逐段地图](references/paragraph-map.md)、[句子与衔接](references/sentence-and-transition-analysis.md)：样本如何编排，以及为何这样编排。
 - [章节写法](references/section-playbook.md)、[段落与语言](references/paragraph-and-language.md)、[主张检查](references/control-claim-checks.md)：写作和审查时的具体决策。
-- [样本画像](references/source-profile.md)：来源、分析口径和使用边界。
+- [样本画像](references/source-profile.md)：来源、分析口径和使用边界，以及按需使用的引言辅助来源。
 - [对标诊断与润色](references/benchmark-revision-workbench.md)：按需使用的原文做法—迁移方法—常见不足—调整方向对照、分层判断及原创改写示例。
 - [案例复盘](references/benchmark-review-casebook.md)：九类具体问题的根因、迁移条件与反例，六组会话原始示范，以及完整答复的覆盖索引。
 
-- [完整起草示例](references/drafting-examples.md)：从明确的教学输入，经组织决策形成连续方法段和结果段，并核对事实与主张边界。
+- [完整起草示例](references/drafting-examples.md)：从明确的教学输入，经组织决策形成连续方法段、结果段及替代模型/策略分工的引言片段，并核对事实与主张边界。
 - [ARS＋Humanizer联合复核](references/ars-writing-quality.md)：与风格软校准一致的本地接入方式、两套方法的分工、学术适配边界及保留反例。
 - [行为试用](references/behavioral-checks.md)：维护时按需复用的基础写作与联合复核输入、判据及有限试用记录；不是日常写作必读项。
 

@@ -84,3 +84,17 @@
 ARS-Codex 的 `ars/shared/style_calibration_protocol.md`（初版参考0.1.28，双文献更新核对3.23.2）提供“风格软约束、单篇样本有限代表性”的设计参考。nature-writing 的 `static/core/stance.md` 与 `static/core/workflow.md` 提供“论点—证据—边界、先理顺段落再拟句”的参考；nature-polishing 的 `static/core/failure-modes.md` 提供先诊断结构后润色的顺序；nature-shared 的术语记录原则用于维持符号和概念一致。
 
 上述是辅助规范，不是目标论文的观察；未迁入 Nature 专属结构、固定问答、全量管线或强制其他技能依赖。这里没有跨样本风格统计，也没有对“作者相似度”给出测量分数。
+
+## 引言写法的辅助来源
+
+补充核对日期：2026-11-05。以下仅为指定位置的论证写法观察，不是新增全文细读、原文科学结论审计或作者风格画像。引用的适用边界与写作动作属于本skill的编辑建议。各来源不自动成为日常必读材料；不移植其实验结果或历史优先权判断。
+
+| 来源与实际阅读位置 | 直接观察 | 可迁移用途与边界 |
+|---|---|---|
+| FNO，§1：[公开HTML](https://ar5iv.labs.arxiv.org/html/2010.08895)；本轮仅核读§1相关文本 | 从重复求解成本进入，区分离散绑定、每实例优化与积分算子计算成本，再说明算子路线与FFT实现的针对性 | 困难与关键设计对应；HTML未锁定修订号，不将其段界与PDF版次等同，也不把当时的方法局限照搬为当前事实 |
+| DeepONet，五作者期刊版pp.218–220：[教学PDF副本](https://aiichironakano.github.io/cs653/Lu-DeepONet-NMachineIntell21.pdf)，DOI 10.1038/s42256-021-00302-5 | 开篇明确函数到函数映射，随后细分输入函数、查询位置与输出值；理论讨论区分逼近、优化与泛化误差 | 尽早识别对象和角色；当前稿件的内部部件身份仍由作者材料决定，不由样本推定 |
+| Um等，Solver-in-the-Loop: Learning from Differentiable Physics to Interact with Iterative PDE-Solvers，NeurIPS 2020，[会议PDF](https://proceedings.neurips.cc/paper_files/paper/2020/file/43e4e6a6f341e00671e123714de019a8-Paper.pdf)，§1，PDF pp.1–2，尤其p.2讨论迭代过程与训练交互的相邻两段 | 将迭代误差和相对预计算数据的输入分布变化，连接到训练时与求解器交互及可微反馈 | 解释训练为何针对使用过程；不证明所有预测/控制必须采用该方案，不将误差修正与控制策略等同 |
+| Karniadakis等，Physics-informed machine learning，Nature Reviews Physics 3, 422–440 (2021)，DOI 10.1038/s42254-021-00314-5，[作者上传全文](https://www.researchgate.net/publication/351814752_Physics-informed_machine_learning)，Box 2及邻近“How to embed physics in ML” | 区分observational、inductive、learning biases，指出可组合使用 | 解释知识进入何处；归类不能替代本研究的约束满足、准确性或泛化证据 |
+| Brunton、Noack与Koumoutsakos，Machine Learning for Fluid Mechanics，Annual Review of Fluid Mechanics 52, 477–508 (2020)，DOI 10.1146/annurev-fluid-010719-060214，[作者站点PDF](https://faculty.washington.edu/sbrunton/ARFM2020.pdf)，摘要与§1 Introduction | 将流体数据、领域知识与建模、优化和控制任务联系起来 | 用于流体研究背景和任务定位；不替代具体算法能力的原始研究依据，不强制复述综述分类 |
+
+上述论文作为辅助论证来源，不替代Li–Zhang与Wang等的主要样本职责。控制适配见[引言指南](section-playbook.md#引言中的问题对象与设计)与[训练/使用讨论](cross-source-synthesis.md#7-辅助写法训练与使用过程怎样进入引言)；无需安装prediction skill。
