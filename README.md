@@ -35,6 +35,7 @@ git clone https://github.com/alanZee/academic-writing-control.git ~/.codex/skill
 
 - [完整起草示例](references/drafting-examples.md)：从明确的教学输入，经组织决策形成连续方法段、结果段及替代模型/策略分工的引言片段，并核对事实与主张边界。
 - [ARS＋Humanizer联合复核](references/ars-writing-quality.md)：与风格软校准一致的本地接入方式、两套方法的分工、学术适配边界及保留反例。
+- [手稿审核自查表](references/manuscript-self-checklist.md)供常规审查后逐条复查。全文任务检查全部适用条目，局部任务检查相关条目及受影响的上下文。执行方式见[必做逐条复查](SKILL.md#checklist-review)。
 - [行为试用](references/behavioral-checks.md)：维护时按需复用的基础写作与联合复核输入、判据及有限试用记录；不是日常写作必读项。
 
 ## 许可
